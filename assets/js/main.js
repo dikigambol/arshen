@@ -407,3 +407,7 @@ if (x.matches) {
     $('#slider-team').removeClass('owl-carousel-team');
     $('#slider-team').removeClass('owl-carousel');
 }
+
+function fullStory() {
+    $('.cursor-ball-big').css({"transform": "scale(200)"});
+}
