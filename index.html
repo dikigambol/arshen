@@ -23,7 +23,6 @@
 </head>
 
 <body>
-
     <div id="main-wrapper">
         <!-- navbar  -->
         <header class="navbar-fixed-top">
@@ -35,7 +34,6 @@
                 <a href="#" class="js-nav-toggle nav-toggle hoverable"><i></i></a>
             </div>
         </header>
-
         <nav id="main-nav">
             <header>
                 <div class="container">
@@ -104,13 +102,11 @@
                 <div>
                     <div id="particles-js"></div>
                     <div class="wrap-hero" style="background-image: url('assets/images/background/hero1.jpg');">
-                        <div class="wrap-text" style="z-index: 2;">
+                        <div class="wrap-text overlay">
                             <div class="wrap-inner-hero">
                                 <h1 class="text-center header-text text-white">Make an Impact for Yourself,</h1>
                                 <p class="text-center windson-text text-white">Then for Everyone.</p>
-                                <p class="text-center sub-text-hero text-white">Lorem ipsum dolor sit amet consectetur
-                                    adipisicing
-                                    elit.
+                                <p class="text-center sub-text-hero text-white">Lorem ipsum dolor sit amet consectetur.
                                 </p>
                                 <button class="btn-hero-white center-object hoverable mt-5">Find More Locations</button>
                             </div>
@@ -153,8 +149,8 @@
                     <i class="ti ti-facebook"></i>
                 </a>
             </div>
-            <div class="wrap-counter" style="z-index: 2;"></div>
-            <a href="#">
+            <div class="wrap-counter overlay"></div>
+            <a href="#" id="scroll-hero">
                 <div class="scroll-wrapper hoverable">
                     <span class="scroll-icon">
                         <span class="scroll-icon__wheel-outer">
@@ -369,7 +365,7 @@
                 <div class="wrapper-locations-heading">
                     <div class="container">
                         <h1 class="text-center heading-locations">Find Our Cafe<br />Near You</h1>
-                        <p style="text-align: center;">
+                        <p class="text-center">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti quae dolores dolorum,
                             fugiat nobis animi quaerat eius a consequuntur molestias assumenda maxime id!
                         </p>
@@ -385,64 +381,10 @@
                                 alt="">
                             <div class="p-4">
                                 <h2>Suhat Street</h2>
-                                <p style="line-height: 18px;">
+                                <p class="sub-title-card-locations">
                                     Jl. Soekarno Hatta Jl. Rembuksari No.1 A <br />Malang, Jawa Timur
                                 </p>
-                                <p style="line-height: 18px;">
-                                    WEEKDAYS 09:00 - 21:00 WIB
-                                    <br>
-                                    WEEKEND 09:00 - 00:00 WIB
-                                </p>
-                                <a class="hoverable btn-link-locations" href="">More Info</a>
-                            </div>
-                        </div>
-                        <div class="card card-locations" data-aos="fade-left" data-aos-easing="linear"
-                            data-aos-duration="1000">
-                            <img class="hoverable"
-                                src="https://stumptown-content.imgix.net/7IJAKhnOe3Q1YTFBH1D3Qm/7390ac1f3b1c119555e16b23ce0e1839/STC_Shopify_Locations_Ace_Portland_STC_Shopify_Locations_Card_Desktop.jpg?w=720&auto=format,compress"
-                                alt="">
-                            <div class="p-4">
-                                <h2>Suhat Street</h2>
-                                <p style="line-height: 18px;">
-                                    Jl. Soekarno Hatta Jl. Rembuksari No.1 A <br />Malang, Jawa Timur
-                                </p>
-                                <p style="line-height: 18px;">
-                                    WEEKDAYS 09:00 - 21:00 WIB
-                                    <br>
-                                    WEEKEND 09:00 - 00:00 WIB
-                                </p>
-                                <a class="hoverable btn-link-locations" href="">More Info</a>
-                            </div>
-                        </div>
-                        <div class="card card-locations" data-aos="fade-left" data-aos-easing="linear"
-                            data-aos-duration="1000">
-                            <img class="hoverable"
-                                src="https://stumptown-content.imgix.net/7IJAKhnOe3Q1YTFBH1D3Qm/7390ac1f3b1c119555e16b23ce0e1839/STC_Shopify_Locations_Ace_Portland_STC_Shopify_Locations_Card_Desktop.jpg?w=720&auto=format,compress"
-                                alt="">
-                            <div class="p-4">
-                                <h2>Suhat Street</h2>
-                                <p style="line-height: 18px;">
-                                    Jl. Soekarno Hatta Jl. Rembuksari No.1 A <br />Malang, Jawa Timur
-                                </p>
-                                <p style="line-height: 18px;">
-                                    WEEKDAYS 09:00 - 21:00 WIB
-                                    <br>
-                                    WEEKEND 09:00 - 00:00 WIB
-                                </p>
-                                <a class="hoverable btn-link-locations" href="">More Info</a>
-                            </div>
-                        </div>
-                        <div class="card card-locations" data-aos="fade-left" data-aos-easing="linear"
-                            data-aos-duration="1000">
-                            <img class="hoverable"
-                                src="https://stumptown-content.imgix.net/7IJAKhnOe3Q1YTFBH1D3Qm/7390ac1f3b1c119555e16b23ce0e1839/STC_Shopify_Locations_Ace_Portland_STC_Shopify_Locations_Card_Desktop.jpg?w=720&auto=format,compress"
-                                alt="">
-                            <div class="p-4">
-                                <h2>Suhat Street</h2>
-                                <p style="line-height: 18px;">
-                                    Jl. Soekarno Hatta Jl. Rembuksari No.1 A <br />Malang, Jawa Timur
-                                </p>
-                                <p style="line-height: 18px;">
+                                <p class="sub-title-card-locations">
                                     WEEKDAYS 09:00 - 21:00 WIB
                                     <br>
                                     WEEKEND 09:00 - 00:00 WIB
@@ -618,19 +560,138 @@
         <!-- end content  -->
     </div>
 
-    <div class="visibility-hidden" id="full-story-wrapper" style="
-     position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    padding: 10px;
-    width: 100%;
-    height: 100%;
-    background: black;
-    z-index: 1001;
-    transition: all 1s">
-<h1 class="text-center text-white">ini story</h1>
+    <!-- story popup  -->
+    <div class="visibility-hidden" id="full-story-wrapper">
+        <section class="story-list first">
+            <div class="outer">
+                <div class="inner">
+                    <div class="bg-story">
+                        <div class="wrapper-list-story">
+                            <h2 class="section-heading text-center">Our Story,</h2>
+                        </div>
+                        <div class="scroll-wrapper hoverable">
+                            <span class="scroll-icon">
+                                <span class="scroll-icon__wheel-outer">
+                                    <span class="scroll-icon__wheel-inner"></span>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="story-list second">
+            <div class="outer">
+                <div class="inner">
+                    <div class="bg-story">
+                        <div class="wrapper-list-story">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 content-hidden">
+                                        <h2 class="section-heading text-dark">The Beginning,</h2>
+                                        <p class="flex-story mt-5">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aperiam saepe
+                                            illum
+                                            accusamus beatae ratione ex optio minus, fugit non porro consequuntur sequi,
+                                            odit dolore, ullam inventore repellat? Nisi, excepturi.
+                                            <br>
+                                            <br>
+                                            accusamus beatae ratione ex optio minus, fugit non porro consequuntur sequi,
+                                            odit dolore, ullam inventore repellat? Nisi, excepturi.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-6 content-hidden">
+                                        <div class="drag">
+                                            <div class="drag-container">
+                                                <div class="drag-button hoverable"></div>
+                                                <div class="drag-line"></div>
+                                                <div class="drag-target"></div>
+                                            </div>
+                                            <p class="text-drag-button">Hold & Drag to Show more</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 content-photos hidden-object">
+                                        <div class="wrapper-photos-story">
+                                            <h1 class="text-dark">Where Everythings Start And Build Together,</h1>
+                                            <p class="flex-story mt-3">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aperiam
+                                                saepe
+                                                illum.
+                                                <br>
+                                                <br>
+                                                Accusamus beatae ratione ex optio minus, fugit non porro consequuntur
+                                                sequi,
+                                                odit dolore, ullam inventore repellat? Nisi, excepturi.
+                                                <br>
+                                                <br>
+                                                Accusamus beatae ratione ex optio minus, fugit non porro consequuntur
+                                                sequi,
+                                                odit dolore, ullam inventore repellat? Nisi, excepturi.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 content-photos hidden-object">
+                                        <div class="owl-carousel-story owl-carousel">
+                                            <img class="img-story" src="assets/images/background/hero1.jpg">
+                                            <img class="img-story" src="assets/images/background/hero2.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scroll-wrapper hoverable">
+                            <span class="scroll-icon dark">
+                                <span class="scroll-icon__wheel-outer">
+                                    <span class="scroll-icon__wheel-inner dark"></span>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="story-list second">
+            <div class="outer">
+                <div class="inner">
+                    <div class="bg-story">
+                        <div class="wrapper-list-story">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img class="img-story" src="assets/images/background/hero1.jpg">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="wrapper-bground-story">
+                                            <h2 class="section-heading text-dark">Cafe's Background.</h2>
+                                            <p class="flex-story mt-5">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aperiam
+                                                saepe
+                                                illum
+                                                accusamus beatae ratione ex optio minus, fugit non porro consequuntur
+                                                sequi,
+                                                odit dolore, ullam inventore repellat? Nisi, excepturi.
+                                                <br>
+                                                <br>
+                                                accusamus beatae ratione ex optio minus, fugit non porro consequuntur
+                                                sequi,
+                                                odit dolore, ullam inventore repellat? Nisi, excepturi.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scroll-wrapper hoverable">
+                            <a href="index.html">
+                                <h5 class="link-home-story">Back to Home</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+    <!-- end story popup  -->
 
     <!-- custom cursor -->
     <div class="cursor hidden-object" id="cursor-wrapper">
@@ -647,35 +708,6 @@
     </div>
     <!-- end custom cursor  -->
 
-    <style>
-        .expand-ball {
-            transition: all .6s;
-            transform: scale(200) !important;
-        }
-
-        .transition-cursor {
-            transition: all .6s;
-        }
-
-        body.story-show {
-            overflow: hidden !important;
-        }
-
-        .visibility-hidden {
-            visibility: hidden;
-            transition-delay: 0s;
-            transition-duration: 0s;
-            transition-property: opacity;
-            opacity: 0;
-        }
-
-        .visibility-hidden.show {
-            visibility: visible;
-            transition-delay: 2s;
-            opacity: 1;
-        }
-    </style>
-
     <script src="./assets/vendor/jquery/jquery.min.js "></script>
     <script src="./assets/vendor/bootstrap/popper.js "></script>
     <script src="./assets/vendor/bootstrap/bootstrap.min.js "></script>
@@ -687,23 +719,12 @@
     <script src='./assets/vendor/gsap/gsap.min.js'></script>
     <script src='./assets/vendor/gsap/scrollTriger.min.js'></script>
     <script src='./assets/vendor/gsap/scrollToPlugin.min.js'></script>
+    <script src="./assets/vendor/observer/observer.min.js"></script>
+    <script src="./assets/vendor/split-text/splittext.min.js"></script>
+    <script src='./assets/vendor/drag-able/draggable.min.js'></script>
+    <script src="assets/js/glitch-slider.js"></script>
     <script src="./assets/js/custom-cursor.js "></script>
     <script src="./assets/js/main.js "></script>
-
-    <script>
-        function fullStory() {
-            $('#cursor-ball').addClass('expand-ball');
-            setTimeout(function () {
-                $('#cursor-ball').removeClass('expand-ball');
-                $('#cursor-ball').addClass("transition-cursor");
-                $('body').addClass("story-show");
-                $('#full-story-wrapper').addClass("show");
-                setTimeout(function () {
-                    $('#cursor-ball').removeClass("transition-cursor");
-                }, 600);
-            }, 600);
-        }
-    </script>
 </body>
 
 </html>

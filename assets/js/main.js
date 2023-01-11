@@ -145,7 +145,7 @@
         } else {
             $('.owl-carousel-team').owlCarousel({
                 loop: false,
-                autoplay: true,
+                autoplay: false,
                 items: 1,
                 stagePadding: 33,
                 margin: 0,
@@ -154,6 +154,18 @@
         }
     }
     carousel5()
+
+    var carousel6 = function () {
+        $('.owl-carousel-story').owlCarousel({
+            loop: false,
+            autoplay: false,
+            items: 1,
+            stagePadding: 33,
+            margin: 20,
+            dots: false,
+        });
+    }
+    carousel6()
 
     var fullHeight = function () {
 
@@ -275,12 +287,12 @@ var particles = function () {
                     "enable": true,
                     "distance": 170,
                     "color": "#fff",
-                    "opacity": 0.4,
+                    "opacity": 0.35,
                     "width": 1
                 },
                 "move": {
                     "enable": true,
-                    "speed": 6,
+                    "speed": 5,
                     "direction": "none",
                     "random": false,
                     "straight": false,
@@ -408,6 +420,117 @@ if (x.matches) {
     $('#slider-team').removeClass('owl-carousel');
 }
 
+function storyScript() {
+    gsap.registerPlugin(Observer);
+    let sections = document.querySelectorAll(".story-list"),
+        images = document.querySelectorAll(".bg-story"),
+        headings = gsap.utils.toArray(".section-heading"),
+        outerWrappers = gsap.utils.toArray(".outer"),
+        innerWrappers = gsap.utils.toArray(".inner"),
+        splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars, words, lines", linesClass: "clip-text" })),
+        currentIndex = 1,
+        wrap = gsap.utils.wrap(0, sections.length),
+        animating;
+    gsap.set(outerWrappers, { yPercent: 100 });
+    gsap.set(innerWrappers, { yPercent: -100 });
+
+    function gotoSection(index, direction) {
+        index = wrap(index);
+        animating = true;
+        let fromTop = direction === -1,
+            dFactor = fromTop ? -1 : 1,
+            tl = gsap.timeline({
+                defaults: { duration: 1.25, ease: "power1.inOut" },
+                onComplete: () => animating = false
+            });
+        if (currentIndex >= 0) {
+            gsap.set(sections[currentIndex], { zIndex: 0 });
+            tl.to(images[currentIndex], { yPercent: -15 * dFactor })
+                .set(sections[currentIndex], { autoAlpha: 0 });
+        }
+        gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
+        tl.fromTo([outerWrappers[index], innerWrappers[index]], {
+            yPercent: i => i ? -100 * dFactor : 100 * dFactor
+        }, {
+            yPercent: 0
+        }, 0)
+            .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
+            .fromTo(splitHeadings[index].chars, {
+                autoAlpha: 0,
+                yPercent: 150 * dFactor
+            }, {
+                autoAlpha: 1,
+                yPercent: 0,
+                duration: 1,
+                ease: "power2",
+                stagger: {
+                    each: 0.02,
+                    from: "random"
+                }
+            }, 0.2);
+
+        currentIndex = index;
+    }
+
+    Observer.create({
+        type: "wheel, touch",
+        wheelSpeed: -1,
+        onDown: () => !animating && gotoSection(currentIndex - 1, -1),
+        onUp: () => !animating && gotoSection(currentIndex + 1, 1),
+        tolerance: 10,
+        preventDefault: true
+    });
+
+    gotoSection(0, 1);
+
+    var dragBtn = $('.drag-button');
+    var dragTgt = $('.drag-target');
+    var overlap = '50%';
+
+    Draggable.create(dragBtn, {
+        type: 'x',
+        bounds: '.drag-container',
+        onDrag: function (e) {
+            if (this.hitTest(dragTgt, overlap)) {
+                $(this.target).addClass('in-range');
+            } else {
+                $(this.target).removeClass('in-range');
+            }
+        },
+        onDragEnd: function (e) {
+            var endPos = $(this.target).parent().width() - 50 + 'px';
+            if ($(this.target).hasClass('in-range')) {
+                $(this.target).addClass('in-target');
+                gsap.to(this.target, { duration: 0.2, x: endPos });
+                gsap.to('.drag', { duration: 0.5, autoAlpha: 0, delay: 0.5 });
+                setTimeout(function () {
+                    $('.bg').addClass('drag-success');
+                    setTimeout(function () {
+                        $('.content-hidden').addClass('hidden-object');
+                        $('.content-photos').removeClass('hidden-object');
+                    }, 1000)
+                    gsap.to('.content-hidden', { duration: 0.5, y: 0, autoAlpha: 0, delay: 0.5 });
+                    setTimeout(function () {
+                        gsap.to('.content-photos', { duration: 0.5, y: 0, autoAlpha: 1, delay: 0.5 });
+                    }, 1200)
+                }, 1000);
+            } else {
+                gsap.to(this.target, { duration: 0.2, x: 0 });
+            }
+        }
+    });
+}
+
 function fullStory() {
-    $('.cursor-ball-big').css({"transform": "scale(200)"});
+    $('#cursor-ball').addClass('expand-ball');
+    setTimeout(function () {
+        $('#cursor-ball').removeClass('expand-ball');
+        $('#cursor-ball').addClass("transition-cursor");
+        $('body').addClass("story-show");
+        $('#full-story-wrapper').addClass("show");
+        storyScript()
+        setTimeout(function () {
+            $('#cursor-ball').removeClass("transition-cursor");
+        }, 600);
+    }, 600);
 }
