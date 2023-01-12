@@ -473,11 +473,11 @@ function storyScript() {
     }
 
     Observer.create({
-        type: "wheel, touch",
+        type: "wheel, touch, pointer",
         wheelSpeed: -1,
         onDown: () => !animating && gotoSection(currentIndex - 1, -1),
         onUp: () => !animating && gotoSection(currentIndex + 1, 1),
-        tolerance: 10,
+        tolerance: 50,
         preventDefault: true
     });
 

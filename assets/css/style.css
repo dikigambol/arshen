@@ -12988,6 +12988,33 @@ header .navbar-brand .logo-brand img {
     color: rgb(42, 42, 42);
 }
 
+@media (max-width: 1199.98px) {
+    .responsive-story {
+        display: none;
+    }
+    .drag {
+        position: static;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .drag-container {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .responsive-story-mobile {
+        display: none;
+    }
+}
+
 /* footer  */
 .footer-content {
     width: 100%;
