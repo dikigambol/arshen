@@ -160,7 +160,7 @@
             loop: false,
             autoplay: false,
             items: 1,
-            stagePadding: 33,
+            stagePadding: 65,
             margin: 20,
             dots: false,
         });
