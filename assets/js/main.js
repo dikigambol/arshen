@@ -534,3 +534,14 @@ function fullStory() {
         }, 600);
     }, 600);
 }
+
+$(".menu-index").on("click", function (e) {
+    e.preventDefault();
+    const href = $(this).attr("href");
+    $("body").removeClass('menu-show');
+    $("html, body").animate({ scrollTop: $(href).offset().top - 80 }, 1000);
+});
+
+if(window.location.hash != '') {
+    $("html, body").animate({ scrollTop: $(window.location.hash).offset().top - 80 }, 1000);
+}
