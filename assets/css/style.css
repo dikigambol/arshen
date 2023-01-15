@@ -203,6 +203,10 @@ a {
     background-color: transparent;
 }
 
+a.underline{
+    text-decoration: underline !important;
+}
+
 a:hover {
     color: #000000;
     text-decoration: underline;
@@ -14075,7 +14079,6 @@ header .navbar-brand .logo-brand img {
 
 .heading-contact {
     font-size: 5.2em;
-    font-weight: 600;
 }
 
 .text-contact {
@@ -14274,6 +14277,24 @@ tr:last-child {
 
 .faq-card.active .toggle-btn .drop-btn {
     display: none;
+}
+
+/* profile  */
+.profile-wrapper {
+    background-color: #f6f5f3;
+    width: 100%;
+    padding: 7rem 0;
+}
+
+@media (max-width: 575.98px) {
+    .profile-wrapper {
+        padding: 6rem 18px;
+    }
+}
+
+.card-profile {
+    border: 1px solid black;
+    padding: 30px 25px 20px 25px;
 }
 
 /* another custom space  */
