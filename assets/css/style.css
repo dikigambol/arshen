@@ -13426,6 +13426,12 @@ header .navbar-brand .logo-brand img {
     width: 100%;
 }
 
+.img-locations {
+    width: 100%;
+    height: 19em;
+    object-fit: cover;
+}
+
 .btn-link-locations {
     font-size: 1.2em;
     text-decoration: underline;
