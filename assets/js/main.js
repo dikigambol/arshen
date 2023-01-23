@@ -44,25 +44,6 @@ window.onscroll = function (e) {
     $('.cursor').addClass('hidden-object');
 }
 
-// smooth scroll 
-var smoothScroll = function () {
-    $("html").easeScroll({
-        frameRate: 80,
-        animationTime: 1000,
-        stepSize: 80,
-        pulseAlgorithm: 1,
-        pulseScale: 8,
-        pulseNormalize: 1,
-        accelerationDelta: 20,
-        accelerationMax: 1,
-        keyboardSupport: true,
-        arrowScroll: 50,
-        touchpadSupport: true,
-        fixedBackground: true
-    });
-}
-smoothScroll()
-
 // navbar 
 if ($("#content").hasClass("non-index")) {
     $("#logo-brand").attr("src", "assets/images/logo.svg");

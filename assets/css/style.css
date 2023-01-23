@@ -13144,13 +13144,11 @@ header .navbar-brand .logo-brand img {
 }
 
 .btn-product-wrapper-subs::after {
-    background-image: url("https://cdn.shopify.com/s/files/1/0495/9446/6472/t/2/assets/sprite-icon-4b20a2d7.svg?v=38430491299383144281649447703");
+    background-image: url("../images/arrow-right.svg");
     background-repeat: no-repeat;
-    background-size: 40.125em 140.75em;
     content: "";
     display: block;
     font-size: 1em;
-    background-position: 0 -7.75em;
     width: 1.375em;
     height: 1.1875em;
     position: absolute;
@@ -13215,14 +13213,8 @@ header .navbar-brand .logo-brand img {
     width: 100%;
 }
 
-.text-container__front .parallax-text {
-    color: transparent;
-    -webkit-text-stroke: 1px #f7f7f7;
-}
-
 .parallax-text {
     position: relative;
-    font-family: "Montserrat", sans-serif;
     font-size: 9vw;
     line-height: 9vw;
     text-transform: capitalize;
@@ -13231,7 +13223,14 @@ header .navbar-brand .logo-brand img {
     color: #c7c7c7;
 }
 
-.parallax-text:last-child {
+.parallax-text-2 {
+    position: relative;
+    font-size: 9vw;
+    line-height: 9vw;
+    text-transform: capitalize;
+    white-space: nowrap;
+    margin: 0;
+    color: #c7c7c7;
     align-self: flex-end;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 3px;
