@@ -13203,18 +13203,13 @@ header .navbar-brand .logo-brand img {
     transition: 0.7s !important;
 }
 
-.text-container {
+.text-container-promo {
     position: absolute;
-    z-index: 1;
     top: 25%;
     left: 0;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
 }
 
-.parallax-text {
-    position: relative;
+.parallax-text-promo {
     font-size: 9vw;
     line-height: 9vw;
     text-transform: capitalize;
@@ -13223,8 +13218,7 @@ header .navbar-brand .logo-brand img {
     color: #c7c7c7;
 }
 
-.parallax-text-2 {
-    position: relative;
+.parallax-text-2-promo {
     font-size: 9vw;
     line-height: 9vw;
     text-transform: capitalize;

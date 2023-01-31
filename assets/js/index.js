@@ -98,10 +98,10 @@ var particles = function () {
         {
             "particles": {
                 "number": {
-                    "value": 100,
+                    "value": 50,
                     "density": {
                         "enable": true,
-                        "value_area": 800
+                        "value_area": 500
                     }
                 },
                 "color": {
@@ -212,31 +212,20 @@ var particles = function () {
 particles()
 
 // text scroll
-let viewHeight = window.innerHeight;
-let textContainers = document.getElementsByClassName('text-container')
-let start = viewHeight - 1422;
+const first = document.getElementById("parallax-text-promo")
+const second = document.getElementById("parallax-text-2-promo")
+const container = document.getElementById("text-container-promo")
+const rect = container.getBoundingClientRect()
+const animate = (element, position) => {
+    element.style.transform = `translateX(${position}px)`
+}
+document.addEventListener('scroll', function (e) {
+    lastKnownScrollPosition = window.scrollY;
 
-gsap.to('.parallax-text', {
-    scrollTrigger: {
-        trigger: textContainers,
-        scrub: true,
-        start: start + "px bottom",
-        end: "bottom top"
-    },
-    x: '-50vw',
-    transformOrigin: "left center",
-    ease: "none"
-});
-gsap.to('.parallax-text-2', {
-    scrollTrigger: {
-        trigger: textContainers,
-        scrub: true,
-        start: start + "px bottom",
-        end: "bottom top"
-    },
-    x: '40vw',
-    transformOrigin: "left center",
-    ease: "none"
+    window.requestAnimationFrame(function () {
+        animate(first, lastKnownScrollPosition * .35 - 360)
+        animate(second, lastKnownScrollPosition * -.35 + 435)
+    });
 });
 
 // team 

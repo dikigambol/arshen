@@ -89,7 +89,8 @@
                                 <p><a href="#promo" class="hoverable menu-index">Promos</a></p>
                             </li>
                             <li class="menu-list">
-                                <p><a href="https://dikigambol.github.io/arshen-dashboard/" class="hoverable">Dashboard</a></p>
+                                <p><a href="https://dikigambol.github.io/arshen-dashboard/"
+                                        class="hoverable">Dashboard</a></p>
                             </li>
                             <li class="menu-list">
                                 <a href="product.html">
@@ -205,11 +206,11 @@
 
             <!-- promo  -->
             <section id="promo">
-                <div class="text-container">
-                    <h2 class="parallax-text">
+                <div class="text-container-promo" id="text-container-promo">
+                    <h2 class="parallax-text-promo" id="parallax-text-promo">
                         promo promo promo promo promo
                     </h2>
-                    <h2 class="parallax-text-2">
+                    <h2 class="parallax-text-2-promo" id="parallax-text-2-promo">
                         promo promo promo promo promo
                     </h2>
                 </div>
@@ -754,18 +755,32 @@
     </div>
     <!-- end custom cursor  -->
 
-    <script src="./assets/vendor/jquery/jquery.min.js "></script>
-    <script src="./assets/vendor/bootstrap/popper.js "></script>
-    <script src="./assets/vendor/bootstrap/bootstrap.min.js "></script>
-    <script src="./assets/vendor/owl-carousel/owl.carousel.min.js "></script>
-    <script src="./assets/vendor/tween-max/tweenMax.min.js "></script>
-    <script src="./assets/vendor/animeJs/anime.min.js "></script>
+    <!-- using cdn on implement if you want to use assets on folder vendors -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+        integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="./assets/vendor/animeJs/anime.min.js"></script>
     <script src="./assets/vendor/particles.js/particles.js"></script>
-    <script src="./assets/vendor/aos/aos.js "></script>
-    <script src='./assets/vendor/gsap/gsap.min.js'></script>
-    <script src='./assets/vendor/gsap/scrollTriger.min.js'></script>
-    <script src='./assets/vendor/gsap/scrollToPlugin.min.js'></script>
-    <script src="./assets/vendor/observer/observer.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+        integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"
+        integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"
+        integrity="sha512-tQFq+nb/TSS648SDzWbSj0A67t4I1PFzR0U6Oi/yEYFyUbAIwg74SOCbr7t2X1Rn+iln7sYwfh8y+z7p0gddOw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/observer@0.0.2/dist/observer.min.js"></script>
     <script src="./assets/vendor/split-text/splittext.js"></script>
     <script src='./assets/vendor/drag-able/draggable.min.js'></script>
     <script src="./assets/js/main.js "></script>
