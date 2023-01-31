@@ -13241,7 +13241,7 @@ header .navbar-brand .logo-brand img {
 }
 
 @media (max-width: 1199.98px) {
-    .text-container {
+    .text-container-promo {
         display: none;
     }
 }
